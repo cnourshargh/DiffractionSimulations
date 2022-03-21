@@ -41,21 +41,21 @@ U_out_phase=U_out.*exp(0.5*1i*(k/z).*(X_out.*X_out+Y_out.*Y_out));      % multip
 intensity=abs(U_out_phase.*U_out_phase);                                % intensity calc.
 
 %% plot
-figure;
-surf(x,y,angle(U),'linestyle','none');                  % Plot input phase profile
-title('Incedent phase profile')
-xlabel('X/ metres') 
-ylabel('Y/ metres') 
-colorbar;
-view(2);
+% figure;
+% surf(x,y,angle(U),'linestyle','none');                  % Plot input phase profile
+% title('Incedent phase profile')
+% xlabel('X/ metres') 
+% ylabel('Y/ metres') 
+% colorbar;
+% view(2);
 
-figure;
-surf(x,y,abs(U.*U),'linestyle','none');                 % plot input intensity profile
-title('Incedent Intensity profile')
-xlabel('X/ metres') 
-ylabel('Y/ metres') 
-colorbar;
-view(2);
+% figure;
+% surf(x,y,abs(U.*U),'linestyle','none');                 % plot input intensity profile
+% title('Incedent Intensity profile')
+% xlabel('X/ metres') 
+% ylabel('Y/ metres') 
+% colorbar;
+% view(2);
 
 figure
 surf(x_out,y_out,intensity,'linestyle','none');         % Plot output intensity profile
@@ -64,11 +64,11 @@ xlabel('X/ metres')
 ylabel('Y/ metres') 
 colorbar;
 view(2);
-
-figure
-surf(x_out,y_out,angle(U_out_phase),'linestyle','none');% Plot output phase profile
-title('Diffraction Phase profile')
-xlabel('X/ metres') 
-ylabel('Y/ metres') 
-colorbar;
-view(2);
+% 
+% figure
+% surf(x_out,y_out,angle(U_out_phase),'linestyle','none');% Plot output phase profile
+% title('Diffraction Phase profile')
+% xlabel('X/ metres') 
+% ylabel('Y/ metres') 
+% colorbar;
+% view(2);
