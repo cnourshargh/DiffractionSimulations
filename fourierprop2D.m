@@ -16,6 +16,7 @@ function [intensity] = fourierprop2D(U,z,lambda,unit)
 
 k=2*pi/lambda;                              % wavenumber of light
                                             
+
 [nx,ny] = size(U);                          % determine dimensions of Incident field
 x = linspace(-0.5*unit*nx,0.5*unit*nx,nx);  % represents X position across input matrix
 y = linspace(-0.5*unit*ny,0.5*unit*ny,ny);  % represents Y position across input matrix
@@ -41,13 +42,13 @@ U_out_phase=U_out.*exp(0.5*1i*(k/z).*(X_out.*X_out+Y_out.*Y_out));      % multip
 intensity=abs(U_out_phase.*U_out_phase);                                % intensity calc.
 
 %% plot
-% figure;
-% surf(x,y,angle(U),'linestyle','none');                  % Plot input phase profile
-% title('Incedent phase profile')
-% xlabel('X/ metres') 
-% ylabel('Y/ metres') 
-% colorbar;
-% view(2);
+figure;
+surf(x,y,angle(U),'linestyle','none');                  % Plot input phase profile
+title('Incedent phase profile')
+xlabel('X/ metres') 
+ylabel('Y/ metres') 
+colorbar;
+view(2);
 
 % figure;
 % surf(x,y,abs(U.*U),'linestyle','none');                 % plot input intensity profile
@@ -64,6 +65,7 @@ xlabel('X/ metres')
 ylabel('Y/ metres') 
 colorbar;
 view(2);
+
 % 
 % figure
 % surf(x_out,y_out,angle(U_out_phase),'linestyle','none');% Plot output phase profile
